@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <center>
+        <div class="page">
+            <form method="POST" class="formLogin">
+                <h1>Login</h1>
+                <p>Digite os seus dados de acesso no campo abaixo.</p>
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="Digite seu e-mail" autofocus="true"/>
+                <label for="password">Senha</label>
+                <input type="password" placeholder="Digite seu e-mail"/>
+                <a href="/">Esqueci minha senha</a>
+                <input type="submit" value="Acessar" class="btn"/>
+            </form>
+        </div>
+    </center>
+
+    <!-- Rodapé -->
+    <footer class="main_footer container">
+    
+        <div class="content">
+            <div class="colfooter">
+                
+                <h3 class="titleFooter"> Menu</h3>
+                
+                <ul>
+                
+                  <li><a href="#" title="Página Inícial">Página Inícial</a></li>
+                  <li><a href="#" title="Sobre a Empresa">Sobre a Empresa</a></li>
+                  <li><a href="#" title="Galeria de Fotos">Galeria de Fotos</a></li>
+                  <li><a href="#" title="Fale Conosco">Fale Conosco</a></li>
+                
+                </ul>
+            </div><!--Col Footer 1-->        
+            <div class="colfooter">
+               
+               <h3 class="titleFooter"> Contato</h3>
+               <p><i class="icon icon-mail"></i> contato@seusite.com.br</p>
+               <p><i class="icon icon-phone"></i> 21 90000-0000</p>
+               <p><i class="icon icon-whatsapp"></i> 21 90000-0000</p>
+            </div><!--Col Footer 2-->
+            <div class="colfooter">
+               
+               <h3 class="titleFooter"> Redes Sociais</h3>
+                
+               <a href="#" class="botao"><span> <i class="icon icon-facebook"></i> </span></a>            
+               <a href="#" class="botao"><span> <i class="icon icon-instagram"></i> </span></a>            
+               <a href="#" class="botao"><span> <i class="icon icon-twitter"></i> </span></a>            
+               <a href="#" class="botao"><span> <i class="icon icon-pinterest"></i> </span></a>            
+            </div><!--Col Footer 3-->
+            <div class="clear"></div>
+        
+        </div><!--Contant-->
+        <div class="main_footer_copy">
+            
+            <p class="m-b-footer"> Seusite - 2021, todos os direitos reservados.</p> 
+            <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: <a href="#" title="Seu nome">Matheus Codonho</a></p>
+        
+        </div>
+    </footer>
+
+    <script>
+        const formLogin = document.querySelector('.formLogin');
+    
+        formLogin.addEventListener('submit', (event) => {
+            event.preventDefault();  // Impede o envio do formulário pelo navegador
+    
+            const email = document.querySelector('input[type="email"]').value;
+            const senha = document.querySelector('input[type="password"]').value;
+    
+            // Exemplo básico de verificação (substitua por sua lógica real):
+            if (email === 'usuario@gmail.com' && senha === '123456') {
+                // Login bem-sucedido!
+                alert('Login realizado com sucesso!');
+                // Redirecione para a página desejada após o login
+                window.location.href = '/put.html'; // Substitua pelo link correto
+            } else {
+                // Login inválido
+                alert('E-mail ou senha incorretos. Por favor, tente novamente.');
+            }
+        });
+    </script>
+
+</body>
+</html>
